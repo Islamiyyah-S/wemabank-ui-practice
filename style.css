@@ -116,12 +116,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: stretch;
+    width: 100%;
     height: 550px; 
-}
-
-.slider1left,
-.slider1right{
-    width: 50%;
 }
 
 .slider1left img,
@@ -139,13 +135,23 @@ body {
     justify-content: center;
     align-items: center;
      height: 550px; 
+     width: 100%;
 }
 .slider4left{
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 30px;
 }
- .slider4left{
-    margin-left: 20px;
- }
+.slider4right{
+width: 60%;
+}
+.slider4right img{
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
 .slider4left h1{
     font-size: 56px;
     color: white;
@@ -342,7 +348,7 @@ body {
 .sme-text,
 .custom-text,
 .alat-text {
-  width: 110%;
+  /* width: 110%; */
   margin-top: 50px;
   margin-right: 40px;
 }
@@ -790,4 +796,65 @@ width: 23%;
   .investor-relations {
     flex-direction: column;
   }
+  .nav-2{
+    display: none;
+  }
+
+   .card-section {
+    display: grid;
+    grid-auto-flow: column;
+    /* Define a fixed width for the items so they don't shrink to 0 */
+    grid-auto-columns: 80%; 
+    
+    /* Enable horizontal scrolling */
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    
+    /* Optional: Improves the feel on mobile */
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    padding: 20px;
+    }
+    
+    .product-cards {
+    /* Ensures items "snap" into place as the user scrolls */
+    scroll-snap-align: start;
 }
+.mini-cards{
+  display: none;
+}
+.slider1, .slider3, .slider4{
+  flex-direction: column;
+  height: 900px;
+  gap: 10px;
+}
+.slider1left, .slider1right, .slider3left, .slider3right{
+  width: 100%;
+  flex: 1;
+}
+.slider1left img, .slider1right img, .slider3left img, .slider3right{
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.slider4left{
+  width: 100%;
+  flex: 1;
+}
+.slider4right{
+  width: 100%;
+  flex: none;
+  /* height: 300px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.slide4right img{
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+}
+
